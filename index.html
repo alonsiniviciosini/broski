@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilidades Sistema</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            gap: 14px;
+        }
+        a {
+            display: block;
+            background-color: #1f2937;
+            color: #f9fafb;
+            border: 1px solid #374151;
+            padding: 16px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .primary {
+            background-color: #2563eb;
+            border-color: #3b82f6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Descarga directa del APK hacia la carpeta Download del J1 -->
+    <a href="./app.apk" class="primary" download>
+        1. Descargar APK
+    </a>
+
+    <!-- 2. Abre Ajustes (para activar Orígenes desconocidos o ver cuentas) -->
+    <a href="intent://com.android.settings/#Intent;scheme=android-app;end">
+        2. Abrir Ajustes
+    </a>
+
+    <!-- 3. Abre Mis Archivos de Samsung para instalar desde Download -->
+    <a href="intent://com.sec.android.app.myfiles/#Intent;scheme=android-app;end">
+        3. Abrir Mis Archivos
+    </a>
+
+    <!-- 4. Alternativa si el navegador bloquea el esquema android-app:// -->
+    <a href="intent:#Intent;action=android.settings.SETTINGS;end">
+        Ajustes (Método Alternativo)
+    </a>
+</body>
+</html>
